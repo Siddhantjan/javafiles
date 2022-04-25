@@ -8,6 +8,8 @@ import java.net.Socket;
 
 public class SocServer {
     public static void main(String[] args) throws IOException {
+
+
         System.out.println("Welcome to Server Side"); // it just for check that server side
         ServerSocket ss=new ServerSocket(9999);
         System.out.println("server is waiting for client"); // server created and waiting for cliend

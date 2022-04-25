@@ -19,13 +19,9 @@ public class ServerSoc {
 
                 System.out.println("A new client is connected : " + s);
 
-                // obtaining input and out streams
-                DataInputStream dis = new DataInputStream(s.getInputStream());
-                DataOutputStream dos = new DataOutputStream(s.getOutputStream());
-
                 System.out.println("Assigning new thread for this client");
 
-                Thread t = new ClientHandler(s, dis, dos);
+                Thread t = new ClientHandler(s);
 
                 t.start();
 

@@ -17,11 +17,15 @@ public class ClientHandler extends Thread{
 
 
     // Constructor
-    public ClientHandler(Socket s, DataInputStream dis, DataOutputStream dos)
-    {
+    public ClientHandler(Socket s) throws IOException {
         this.s = s;
-        this.dis = dis;
-        this.dos = dos;
+
+        // obtaining input and out streams
+        dis = new DataInputStream(s.getInputStream());
+        dos = new DataOutputStream(s.getOutputStream());
+
+//        this.dis = dis;
+//        this.dos = dos;
     }
 
     @Override
